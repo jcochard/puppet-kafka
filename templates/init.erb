@@ -23,7 +23,7 @@ if [ -f /etc/default/kafka ]; then
 fi
 
 start() {
-  ulimit -n 65536
+  ulimit -n <%= @ulimit_nofile %>
   ulimit -s 10240
   ulimit -c unlimited
   if [ -f $PID_FILE ]

@@ -59,6 +59,7 @@ class kafka::broker (
   $service_restart = $kafka::params::service_restart,
   $jmx_opts        = $kafka::params::broker_jmx_opts,
   $heap_opts       = $kafka::params::broker_heap_opts,
+  $ulimit_nofile   = $kafka::params::broker_ulimit_nofile,
   $log4j_opts      = $kafka::params::broker_log4j_opts,
   $opts            = $kafka::params::broker_opts,
 ) inherits kafka::params {
