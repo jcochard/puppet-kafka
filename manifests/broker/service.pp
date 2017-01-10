@@ -14,6 +14,7 @@ class kafka::broker::service(
   $log4j_opts      = $kafka::broker::log4j_opts,
   $opts            = $kafka::broker::opts,
   $heap_opts       = $kafka::broker::heap_opts,
+  $ulimit_nofile   = $kafka::broker::ulimit_nofile,
 ) {
 
   if $caller_module_name != $module_name {
